@@ -121,6 +121,12 @@ body{
     
      margin: auto;
  }
+ .add_evento{
+    max-width:500px;
+    margin-bottom:800px;
+   
+    margin: auto;
+}
  
  .login-bg{
      background-color: rgb(0, 0, 0);
@@ -142,4 +148,6 @@ body{
      width: 300px;
  }
  
- 
+.offcanvas{
+    background-color: rgba(253, 248, 255, 0.62);
+} 

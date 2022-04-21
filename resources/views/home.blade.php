@@ -1,4 +1,5 @@
 <?php 
+use Illuminate\Support\Facades\Route;
 ?>
 
 <!DOCTYPE html>
@@ -29,7 +30,7 @@
 
   <nav class="navbar fixed-top navbar-expand-sm  navbar-dark " id="nav">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><img src="../resources/images/logo3.jpg" alt="" id="logo"></a>
+      <a class="navbar-brand" href="{{route('home')}}"><img src="../resources/images/logo3.jpg" alt="" id="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
         aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -37,15 +38,54 @@
       <div class="collapse navbar-collapse" id="navbarText">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="login">Entrar</a>
+            <a class="nav-link" href="{{route('login')}}">Entrar</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="cadastrar">Cadstre-se</a>
+            <a class="nav-link" href="{{route('cadastrar')}}">Cadstrar</a>
           </li>
-        </ul>
+          <li class="nav-item">
+            <a class="nav-link" href="{{route('cadastrar')}}">Cadstrar</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Cidades
+            </a>
+            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <li><a class="dropdown-item" href="#">Araguatins</a></li>
+              <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
+              <li><a class="dropdown-item" href="#">Axixá</a></li>
+              <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
+              <li><a class="dropdown-item" href="#">Esperantina</a></li>
+              <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
+              <li><a class="dropdown-item" href="#">São sebastião</a></li>
+              <li><a class="dropdown-item" href="#">Araguatins</a></li>
+              <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
+              <li><a class="dropdown-item" href="#">Axixá</a></li>
+              <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
+              <li><a class="dropdown-item" href="#">Esperantina</a></li>
+              <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
+              <li><a class="dropdown-item" href="#">São sebastião</a></li>
+              <li><a class="dropdown-item" href="#">Araguatins</a></li>
+              <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
+              <li><a class="dropdown-item" href="#">Axixá</a></li>
+              <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
+              <li><a class="dropdown-item" href="#">Esperantina</a></li>
+              <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
+              <li><a class="dropdown-item" href="#">São sebastião</a></li>
+
+            </ul>
+          </li>
+        
+         </ul>
+              <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Cidade ou evento" aria-label="Search">
+            <button class="btn btn_form" type="submit">Buscar</button>
+          </form>
+        
+     
 
       </div>
     </div>
@@ -68,7 +108,7 @@
     </div>
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="../resources/images/gdkombi.jpg" class="d-block w-100 carrocel" alt="...">
+        <img src="../resources/images/noite_ev.jpg" class="d-block w-100 carrocel" alt="...">
       </div>
       <div class="carousel-item">
         <img src="../resources/images/festa_do_cupu.jpg" class="d-block w-100 carrocel" alt="...">
@@ -90,8 +130,98 @@
 </div>
 </div>
 
+  </nav>
 
 <div class="row">
+  <div class="col-12">
+    <nav class="navbar navbar-expand-md navbar-light ">
+        <div class="container-fluid">
+            <a href="" class="btn me-1 ">Esta semana</a>
+         
+          <a href="" class="btn me-1 ">Este mes</a>
+          <button class=" btn" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" >
+           mais filtros
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a href="" class="btn me-1 my-1 ">desta semana</a>
+                  </li>
+           
+              <li class="nav-item">
+                <a href="" class="btn me-1 my-1 ">desta semana</a>
+              </li>
+              <li class="nav-item">
+                <a href="" class="btn me-1 my-1 ">deste mês</a> 
+              </li>
+              <li class="nav-item">
+                <a href="" class="btn me-1 my-1 ">aberto ao publico</a> 
+              </li>
+            </ul>
+          </div>
+        </div>
+   
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="col-12">
+    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
+<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
+
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+  </div>
+</div>
+<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>.....</p>
+  </div>
+</div>
+<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
+  <div class="offcanvas-header">
+    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <p>Try scrolling the rest of the page to see this option in action.</p>
+  </div>
+</div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
   
   <div class="col my-3">
 

@@ -1,3 +1,7 @@
+<?php 
+use Illuminate\Support\Facades\Route;
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -26,7 +30,7 @@
     
     <nav class="navbar fixed-top navbar-expand-sm  navbar-dark " id="nav">
         <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="../resources/images/logo3.jpg" alt="" id="logo"></a>
+          <a class="navbar-brand" href="{{route('home')}}"><img src="../resources/images/logo3.jpg" alt="" id="logo"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarText"
             aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -34,13 +38,13 @@
           <div class="collapse navbar-collapse" id="navbarText">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
               <li class="nav-item">
-                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                <a class="nav-link active" aria-current="page" href="{{route('home')}}">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="login.html">Entrar</a>
+                <a class="nav-link" href="{{route('login')}}">Entrar</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="cadastro.html">Cadstre-se</a>
+                <a class="nav-link" href="{{route('cadastrar')}}">Cadstre-se</a>
               </li>
             </ul>
     
@@ -72,7 +76,7 @@
                 </div>
                 <div class="mt-2">
                   <button type="submit" class="btn btn_form">Entrar</button>
-                  <a href="" class="btn btn_form">Cadastre-se</a>
+                  <a href="{{route('cadastrar')}}" class="btn btn_form">Cadastre-se</a>
                 </div>
               </form>
             
