@@ -74,78 +74,136 @@ use Illuminate\Support\Facades\Route;
                     <label for="exampleFormControlInput1" class="form-label">Local</label>
                     <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome do clube/praça/">
                   </div>
-                  <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Endereço</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="rua/numero/">
-                    
-                  </div>
+                
+                 
                  
                   <div class="mb-3">
-                    <label for="exampleFormControlInput1" class="form-label">Cidade</label>
-                    <select class="form-select" aria-label="Default select example">
-                      <option value="1">Araguatins</option>
-                      <option value="2">Augustinopolis</option>
-                      <option value="3">Buriti do Tocantins</option>
-                      <option value="4">Araguatins</option>
-                      <option value="5">Augustinopolis</option>
-                      <option value="6">Buriti do Tocantins</option>
-                      <option value="7">Araguatins</option>
-                      <option value="8">Augustinopolis</option>
-                      <option value="9">Buriti do Tocantins</option>
-                      <option value="10">Araguatins</option>
-                      <option value="11">Augustinopolis</option>
-                      <option value="12">Buriti do Tocantins</option>
-                      <option value="13">Araguatins</option>
-                      <option value="14">Augustinopolis</option>
-                      <option value="15">Buriti do Tocantins</option>
-                      <option value="16">Araguatins</option>
-                      <option value="17">Augustinopolis</option>
-                      <option value="18">Buriti do Tocantins</option>
-                      <option value="19">Araguatins</option>
-                      <option value="20">Augustinopolis</option>
-                      <option value="21">Buriti do Tocantins</option>
-                      <option value="22">Araguatins</option>
-                      <option value="23">Augustinopolis</option>
-                      <option value="24">Buriti do Tocantins</option>
-                      <option value="25">Buriti do Tocantins</option>
-
-                    </select>
-                  </div>
-                  <div class="mb-3">
+                    <div class="row">
+                      <div class="col-6">
+                        <label for="exampleFormControlInput1" class="form-label">Cidade</label>
+                        <select class="form-select" aria-label="Default select example">
+                          <option value="1">Araguatins</option>
+                          <option value="2">Augustinopolis</option>
+                          <option value="3">Buriti do Tocantins</option>
+                          <option value="4">Araguatins</option>
+                          <option value="5">Augustinopolis</option>
+                          <option value="6">Buriti do Tocantins</option>
+                          <option value="7">Araguatins</option>
+                          <option value="8">Augustinopolis</option>
+                          <option value="9">Buriti do Tocantins</option>
+                          <option value="10">Araguatins</option>
+                          <option value="11">Augustinopolis</option>
+                          <option value="12">Buriti do Tocantins</option>
+                          <option value="13">Araguatins</option>
+                          <option value="14">Augustinopolis</option>
+                          <option value="15">Buriti do Tocantins</option>
+                          <option value="16">Araguatins</option>
+                          <option value="17">Augustinopolis</option>
+                          <option value="18">Buriti do Tocantins</option>
+                          <option value="19">Araguatins</option>
+                          <option value="20">Augustinopolis</option>
+                          <option value="21">Buriti do Tocantins</option>
+                          <option value="22">Araguatins</option>
+                          <option value="23">Augustinopolis</option>
+                          <option value="24">Buriti do Tocantins</option>
+                          <option value="25">Buriti do Tocantins</option>
+    
+                        </select>
+                      </div>
+                      <div class="col-6">
+                          <label for="exampleFormControlInput1" class="form-label">Endereço</label>
+                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="rua/numero/">
+                      </div>
                     
-                      <label for="exampleFormControlInput1" class="form-label">Imagem</label>
+                       <div class="col-6">
+                        <label for="exampleFormControlInput1" class="form-label">Data inicio:</label>
+                       <input class="form-control" type="date">
+                       
+                    </div>
+                    
+                    <div class="col-6">
+                       <label for="exampleFormControlInput1" class="form-label">Hora inicio:</label>
+                       <input class="form-control" type="time">
+                    </div>
+                    <div class="col-6">
+                      <label for="exampleFormControlInput1" class="form-label">Data final:</label>
+                     <input class="form-control" type="date">
+                     
+                  </div>
+                  
+                  <div class="col-6">
+                     <label for="exampleFormControlInput1" class="form-label">Hora final:</label>
+                     <input class="form-control" type="time">
+                  </div>
+                  </div>
+<label for="exampleFormControlInput1" class="form-label">Imagem</label>
                       <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
-                      
+                       
                     
                   </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
+                  <div class="row" id="preco">
+                  <div class="col-4">
+                      <div class="form-check">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked onclick="valor_entrada()">
                     <label class="form-check-label" for="flexRadioDefault1">
                       Evento gratis
                     </label>
                   </div>
                   <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
-                    <label class="form-check-label" for="flexRadioDefault2">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick="valor_entrada()">
+                    <label class="form-check-label" for="flexRadioDefault2" >
                       Evento pago
                     </label>
                   </div>
+                  </div>
+                
+                  
+                
+
+                </div>
+                
                   <hr>
                   <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Descriçao</label>
                     <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
+
+
+                    </div>
+                    
+                      
               </form>
-            
-            
+           </div>
         </div>
-    </div>
-</div>
+        </div>
+    
       
             
 
 
+<script>
 
+    var entrada = document.getElementById('flexRadioDefault2')
+    var gratis = document.getElementById('flexRadioDefault1')
+    var preco = document.getElementById('preco')
+  console.log(entrada.checked)
+  function valor_entrada(){
+    console.log(entrada.checked)
+    if(entrada.checked == true){
+      gratis.checked = false
+      entrada.checked = true
+    preco.innerHTML += '<div class="col-4"><label for="exampleFormControlInput1" class="form-label">Preço Homem:</label><input class="form-control" type="number" value="00.00"></div><div class="col-4"><label for="exampleFormControlInput1" class="form-label">Preço Mulher:</label><input class="form-control" type="number" value="00.00"></div>'
+  }else{
+    gratis.checked = true
+      entrada.checked = false
+    preco.innerHTML += ''
+  }
+  console.log(entrada.checked)
+
+}
+
+</script>
 </body>
 
 </html>
+

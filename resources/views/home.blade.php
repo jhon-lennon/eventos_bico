@@ -78,7 +78,11 @@ use Illuminate\Support\Facades\Route;
 
             </ul>
           </li>
-        
+          <li class="nav-item">
+
+    <a href="" class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Cidades</a>
+
+          </li>
          </ul>
               <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Cidade ou evento" aria-label="Search">
@@ -196,7 +200,31 @@ use Illuminate\Support\Facades\Route;
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <p>.....</p>
+    <ul class="dropdown-menu">
+      <li><a class="dropdown-item"  href="{{route('home')}}">Araguatins</a></li>
+      <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
+      <li><a class="dropdown-item" href="#">Axixá</a></li>
+      <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
+      <li><a class="dropdown-item" href="#">Esperantina</a></li>
+      <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
+      <li><a class="dropdown-item" href="#">São sebastião</a></li>
+      <li><a class="dropdown-item" href="#">Araguatins</a></li>
+      <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
+      <li><a class="dropdown-item" href="#">Axixá</a></li>
+      <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
+      <li><a class="dropdown-item" href="#">Esperantina</a></li>
+      <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
+      <li><a class="dropdown-item" href="#">São sebastião</a></li>
+      <li><a class="dropdown-item" href="#">Araguatins</a></li>
+      <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
+      <li><a class="dropdown-item" href="#">Axixá</a></li>
+      <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
+      <li><a class="dropdown-item" href="#">Esperantina</a></li>
+      <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
+      <li><a class="dropdown-item" href="#">São sebastião</a></li>
+
+    </ul>
+    
   </div>
 </div>
 <div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
