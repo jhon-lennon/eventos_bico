@@ -65,14 +65,16 @@ use Illuminate\Support\Facades\Route;
                 <img src="../resources/images/Eventos.gif" class="img-login" alt="...">
             </div>
           
-                <form>
+                <form action="{{route('post')}}" method="post">
+                 @csrf
+
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Titulo</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Nome do evento">
+                    <input type="email" class="form-control" name="titulo" id="exampleFormControlInput1" placeholder="Nome do evento">
                   </div>
                   <div class="mb-3">
                     <label for="exampleFormControlInput1" class="form-label">Local</label>
-                    <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="nome do clube/praça/">
+                    <input type="email" class="form-control" name="local" id="exampleFormControlInput1" placeholder="nome do clube/praça/">
                   </div>
                 
                  
@@ -81,7 +83,7 @@ use Illuminate\Support\Facades\Route;
                     <div class="row">
                       <div class="col-6">
                         <label for="exampleFormControlInput1" class="form-label">Cidade</label>
-                        <select class="form-select" aria-label="Default select example">
+                        <select class="form-select" name="cidade" aria-label="Default select example">
                           <option value="1">Araguatins</option>
                           <option value="2">Augustinopolis</option>
                           <option value="3">Buriti do Tocantins</option>
@@ -112,52 +114,58 @@ use Illuminate\Support\Facades\Route;
                       </div>
                       <div class="col-6">
                           <label for="exampleFormControlInput1" class="form-label">Endereço</label>
-                          <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="rua/numero/">
+                          <input type="text" class="form-control"  name="endereco" id="exampleFormControlInput1" placeholder="rua/numero/">
                       </div>
                     
                        <div class="col-6">
                         <label for="exampleFormControlInput1" class="form-label">Data inicio:</label>
-                       <input class="form-control" type="date">
+                       <input class="form-control" name="data_inicio" type="date">
                        
                     </div>
                     
                     <div class="col-6">
                        <label for="exampleFormControlInput1" class="form-label">Hora inicio:</label>
-                       <input class="form-control" type="time">
+                       <input class="form-control" name="hora_inicio" type="time">
                     </div>
                     <div class="col-6">
                       <label for="exampleFormControlInput1" class="form-label">Data final:</label>
-                     <input class="form-control" type="date">
+                     <input class="form-control" name="data_final" type="date">
                      
                   </div>
                   
                   <div class="col-6">
                      <label for="exampleFormControlInput1" class="form-label">Hora final:</label>
-                     <input class="form-control" type="time">
+                     <input class="form-control" name="hora_final" type="time">
                   </div>
                   </div>
-<label for="exampleFormControlInput1" class="form-label">Imagem</label>
-                      <input type="file" class="form-control" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                      <label for="exampleFormControlInput1" class="form-label">Imagem</label>
+                      <input type="file" class="form-control" name="imagem" id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
                        
                     
                   </div>
-                  <div class="row" id="preco">
+                  <div class="row" >
                   <div class="col-4">
-                      <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked onclick="valor_entrada()">
-                    <label class="form-check-label" for="flexRadioDefault1">
-                      Evento gratis
+                      <div class="form-check form_preco">
+                    <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1" checked onclick="valor_entrada()">
+                    <label class="form-check-label " for="flexRadioDefault1">
+                     Evento Gratis
                     </label>
                   </div>
-                  <div class="form-check">
-                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" onclick="valor_entrada()">
+                  <div class="form-check form_preco">
+                    <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"  onclick="valor_entrada()">
                     <label class="form-check-label" for="flexRadioDefault2" >
-                      Evento pago
+                      Evento Pago
                     </label>
                   </div>
                   </div>
                 
-                  
+                  <div class="col-4 " id="preco_homem">
+                   
+                     </div>
+
+                      <div class="col-4 "  id="preco_mulher">
+                        
+                  </div>
                 
 
                 </div>
@@ -165,9 +173,10 @@ use Illuminate\Support\Facades\Route;
                   <hr>
                   <div class="mb-3">
                     <label for="exampleFormControlTextarea1" class="form-label">Descriçao</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
                   </div>
-
+                  <button type="submit" class="btn btn_form">Adicionar</button>
+                  <button class="btn btn_form">Cancelar</button>
 
                     </div>
                     
@@ -184,24 +193,20 @@ use Illuminate\Support\Facades\Route;
 <script>
 
     var entrada = document.getElementById('flexRadioDefault2')
-    var gratis = document.getElementById('flexRadioDefault1')
-    var preco = document.getElementById('preco')
+    var preco_homem = document.getElementById('preco_homem')
+    var preco_mulher = document.getElementById('preco_mulher')
+
   console.log(entrada.checked)
   function valor_entrada(){
     console.log(entrada.checked)
     if(entrada.checked == true){
-      gratis.checked = false
-      entrada.checked = true
-    preco.innerHTML += '<div class="col-4"><label for="exampleFormControlInput1" class="form-label">Preço Homem:</label><input class="form-control" type="number" value="00.00"></div><div class="col-4"><label for="exampleFormControlInput1" class="form-label">Preço Mulher:</label><input class="form-control" type="number" value="00.00"></div>'
-  }else{
-    gratis.checked = true
-      entrada.checked = false
-    preco.innerHTML += ''
-  }
-  console.log(entrada.checked)
-
+    preco_homem.innerHTML = '<label for="exampleFormControlInput1" class="form-label">Homem</label><input class="form-control" name="preco_homem" type="number" value="00.00">'
+    preco_mulher.innerHTML = '<label for="exampleFormControlInput1" class="form-label">Mulher</label><input class="form-control" name="preco_mulher" type="number" value="00.00">'
+}else{
+  preco_homem.innerHTML = ''
+  preco_mulher.innerHTML = ''
 }
-
+}
 </script>
 </body>
 

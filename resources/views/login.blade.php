@@ -64,11 +64,11 @@ use Illuminate\Support\Facades\Route;
             <div class="text-center">
                 <img src="../resources/images/Eventos.gif" class="img-login" alt="...">
             </div>
-          
-                <form>
+            <form action="{{route('post')}}" method="post">
+              @csrf
                 <div class="form-group">
                   <label for="exampleInputEmail1">Usuario</label>
-                  <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                  <input type="email" class="form-control" id="exampleInputEmail1" name="usuario" aria-describedby="emailHelp" placeholder="Enter email">
                 </div>
                 <div class="form-group">
                   <label for="exampleInputPassword1">Senha</label>

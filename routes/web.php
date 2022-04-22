@@ -1,5 +1,7 @@
 <?php
 
+//use GuzzleHttp\Psr7\Request;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -25,3 +27,8 @@ Route::get('/cadastrar', function () {
 Route::get('/add_evento', function () {
     return view('add_evento');
 })->name('add_evento');
+
+Route::post('/enviar', function (Request $request) {
+   echo"<pre>";
+    print_r($request->input());
+})->name('post');
