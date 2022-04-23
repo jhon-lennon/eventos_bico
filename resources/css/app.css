@@ -173,3 +173,8 @@ img {
 .form_preco input:checked{
     background-color: rgb(255, 0, 255);
 }
+
+.dropdown-menu{
+    height: 300px;
+    overflow-y: scroll;
+}

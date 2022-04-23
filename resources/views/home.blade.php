@@ -1,32 +1,6 @@
-<?php 
-use Illuminate\Support\Facades\Route;
-?>
+@extends('layout/layout')
 
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
-    crossorigin="anonymous"></script>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-  <title>Document</title>
-  <link rel="stylesheet" href="../resources/css/app.css">
-
-
-  <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/fontawesome.css">
-  <script src="fontawesome-free-6.1.1-web/js/all.js"></script>
-
-
-
-
-</head>
-
-<body>
+@section('home')
 
   <nav class="navbar fixed-top navbar-expand-sm  navbar-dark " id="nav">
     <div class="container-fluid">
@@ -78,11 +52,7 @@ use Illuminate\Support\Facades\Route;
 
             </ul>
           </li>
-          <li class="nav-item">
-
-    <a href="" class="nav-link" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Cidades</a>
-
-          </li>
+   
          </ul>
               <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Cidade ou evento" aria-label="Search">
@@ -166,77 +136,6 @@ use Illuminate\Support\Facades\Route;
         </div>
    
   </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="col-12">
-    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Enable body scrolling</button>
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBackdrop" aria-controls="offcanvasWithBackdrop">Enable backdrop (default)</button>
-<button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions">Enable both scrolling & backdrop</button>
-
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasScrollingLabel">Colored with scrolling</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
-  </div>
-</div>
-<div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasWithBackdrop" aria-labelledby="offcanvasWithBackdropLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBackdropLabel">Offcanvas with backdrop</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <ul class="dropdown-menu">
-      <li><a class="dropdown-item"  href="{{route('home')}}">Araguatins</a></li>
-      <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
-      <li><a class="dropdown-item" href="#">Axixá</a></li>
-      <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
-      <li><a class="dropdown-item" href="#">Esperantina</a></li>
-      <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
-      <li><a class="dropdown-item" href="#">São sebastião</a></li>
-      <li><a class="dropdown-item" href="#">Araguatins</a></li>
-      <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
-      <li><a class="dropdown-item" href="#">Axixá</a></li>
-      <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
-      <li><a class="dropdown-item" href="#">Esperantina</a></li>
-      <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
-      <li><a class="dropdown-item" href="#">São sebastião</a></li>
-      <li><a class="dropdown-item" href="#">Araguatins</a></li>
-      <li><a class="dropdown-item" href="#">Augustinopolis</a></li>
-      <li><a class="dropdown-item" href="#">Axixá</a></li>
-      <li><a class="dropdown-item" href="#">Butiri do Tocantins</a></li>
-      <li><a class="dropdown-item" href="#">Esperantina</a></li>
-      <li><a class="dropdown-item" href="#">Carrasco bonito</a></li>
-      <li><a class="dropdown-item" href="#">São sebastião</a></li>
-
-    </ul>
-    
-  </div>
-</div>
-<div class="offcanvas offcanvas-start" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions" aria-labelledby="offcanvasWithBothOptionsLabel">
-  <div class="offcanvas-header">
-    <h5 class="offcanvas-title" id="offcanvasWithBothOptionsLabel">Backdrop with scrolling</h5>
-    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-  </div>
-  <div class="offcanvas-body">
-    <p>Try scrolling the rest of the page to see this option in action.</p>
-  </div>
-</div>
-</div>
 
 
 
@@ -498,7 +397,4 @@ use Illuminate\Support\Facades\Route;
   </div>
 
 
-
-</body>
-
-</html>
+@endsection
