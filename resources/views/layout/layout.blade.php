@@ -26,7 +26,7 @@ use Illuminate\Support\Facades\Route;
 <body>
 
     @yield('home')
-
+    <script src="../resources/js/app.js"></script>
 </body>
 
 </html>
