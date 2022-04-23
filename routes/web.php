@@ -27,6 +27,9 @@ Route::get('/cadastrar', function () {
 Route::get('/add_evento', function () {
     return view('add_evento');
 })->name('add_evento');
+Route::get('/mostrar_evento', function () {
+    return view('mostrar_evento');
+})->name('mostrar_evento');
 
 Route::post('/enviar', function (Request $request) {
    echo"<pre>";

@@ -178,3 +178,19 @@ img {
     height: 300px;
     overflow-y: scroll;
 }
+
+.ver_evento{
+    
+    max-width: 800px;
+    max-height: 550px;
+    width: auto;
+    height: auto;
+    margin: auto;
+   
+
+}
+
+.img_ver_evento{
+    border-radius: 10px;
+    height: 400px;
+}

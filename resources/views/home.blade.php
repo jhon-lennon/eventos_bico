@@ -93,8 +93,9 @@
 
       </div>
       <div class="foote-card">
-        <p class="mt-3 ma-5 pfooter"><a href="" class="btn  ">Ver evento</a> <a href=""
-            class="btn btn-conf">Confirmar presença</a>
+        <p class="mt-3 ma-5 pfooter"><a href="{{route('mostrar_evento') }}" class="btn">Ver evento</a> 
+          <a href=""class="btn btn-conf">Confirmar presença</a> </p>
+            
       </div>
     </div>
   </div>

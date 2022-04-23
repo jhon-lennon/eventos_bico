@@ -1,10 +1,6 @@
 @include('cabecario')
 @extends('layout/layout')
 @section('home')
-
-
-
-
     <div class="container-fluid login-bg">
         <div class="row">
             <div class="add_evento mt-2">
@@ -14,10 +10,8 @@
                 <div class="text-center">
                     <img src="../resources/images/Eventos.gif" class="img-login" alt="...">
                 </div>
-
                 <form action="{{ route('post') }}" method="post">
                     @csrf
-
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Titulo</label>
                         <input type="email" class="form-control" name="titulo" id="exampleFormControlInput1"
@@ -28,9 +22,6 @@
                         <input type="email" class="form-control" name="local" id="exampleFormControlInput1"
                             placeholder="nome do clube/praça/">
                     </div>
-
-
-
                     <div class="mb-3">
                         <div class="row">
                             <div class="col-6">
@@ -61,7 +52,6 @@
                                     <option value="23">Augustinopolis</option>
                                     <option value="24">Buriti do Tocantins</option>
                                     <option value="25">Buriti do Tocantins</option>
-
                                 </select>
                             </div>
                             <div class="col-6">
@@ -69,13 +59,10 @@
                                 <input type="text" class="form-control" name="endereco" id="exampleFormControlInput1"
                                     placeholder="rua/numero/">
                             </div>
-
                             <div class="col-6">
                                 <label for="exampleFormControlInput1" class="form-label">Data inicio:</label>
                                 <input class="form-control" name="data_inicio" type="date">
-
                             </div>
-
                             <div class="col-6">
                                 <label for="exampleFormControlInput1" class="form-label">Hora inicio:</label>
                                 <input class="form-control" name="hora_inicio" type="time">
@@ -83,9 +70,7 @@
                             <div class="col-6">
                                 <label for="exampleFormControlInput1" class="form-label">Data final:</label>
                                 <input class="form-control" name="data_final" type="date">
-
                             </div>
-
                             <div class="col-6">
                                 <label for="exampleFormControlInput1" class="form-label">Hora final:</label>
                                 <input class="form-control" name="hora_final" type="time">
@@ -93,38 +78,29 @@
                         </div>
                         <label for="exampleFormControlInput1" class="form-label">Imagem</label>
                         <input type="file" class="form-control" name="imagem" aria-label="Upload">
-
-
                     </div>
                     <div class="row">
                         <div class="col-4">
                             <div class="form-check form_preco">
-                                <input class="form-check-input " type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault1" checked onclick="valor_entrada()">
+                                <input class="form-check-input " type="radio" name="flexRadioDefault" id="flexRadioDefault1"
+                                    checked onclick="valor_entrada()">
                                 <label class="form-check-label " for="flexRadioDefault1">
                                     Evento Gratis
                                 </label>
                             </div>
                             <div class="form-check form_preco">
-                                <input class="form-check-input" type="radio" name="flexRadioDefault"
-                                    id="flexRadioDefault2" onclick="valor_entrada()">
+                                <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2"
+                                    onclick="valor_entrada()">
                                 <label class="form-check-label" for="flexRadioDefault2">
                                     Evento Pago
                                 </label>
                             </div>
                         </div>
-
                         <div class="col-4 " id="preco_homem">
-
                         </div>
-
                         <div class="col-4 " id="preco_mulher">
-
                         </div>
-
-
                     </div>
-
                     <hr>
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Descriçao</label>
@@ -132,13 +108,9 @@
                     </div>
                     <button type="submit" class="btn btn_form">Adicionar</button>
                     <button class="btn btn_form">Cancelar</button>
-
             </div>
-
             </form>
         </div>
     </div>
     </div>
-
-    
 @endsection
