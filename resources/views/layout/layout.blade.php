@@ -23,7 +23,7 @@ use Illuminate\Support\Facades\Route;
 
 </head>
 
-<body>
+
 
     @yield('home')
     <script src="../resources/js/app.js"></script>

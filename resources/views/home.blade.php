@@ -1,7 +1,9 @@
 
-@include('cabecario')
+
 @extends('layout/layout')
 @section('home')
+<body class="bg-main">
+  @include('cabecario')
 
   <div class="container-fluid espacocarrocel">
     <div class="row">

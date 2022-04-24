@@ -1,7 +1,12 @@
-body {
+.bg-main {
     background: fixed;
-    background-image: linear-gradient(220deg, #6D17E6, #a074cc, #814fe5, #B895E6, #6D17E6, #a074cc, #814fe5, #B895E6);
-
+    background-image: linear-gradient(220deg, #5814b8, #825ea5, #683fbc, #997cc0, #5817b2, #a074cc, #7144ca, #B895E6);
+}
+.bg-secundario{
+    background-color: black;
+}
+.bg-transparente{
+    background-color: rgba(0, 0, 0, 0.36);
 }
 
 #logo {
@@ -49,11 +54,11 @@ img {
 }
 
 #entrada {
-    color: rgb(4, 125, 2);
+    color: rgb(27, 225, 24);
 }
 
 #dia {
-    color: rgb(237, 147, 3);
+    color: rgb(255, 168, 27);
 }
 
 .btn {
@@ -139,15 +144,10 @@ img {
 }
 
 .login-bg {
-    background-color: rgb(0, 0, 0);
+    
     color: rgb(255, 255, 255);
-    height: 1200px;
+   
 
-}
-
-#login-bg {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
 }
 
 .h1-login {
@@ -191,6 +191,36 @@ img {
 }
 
 .img_ver_evento{
-    border-radius: 10px;
+    border-radius: 10px 10px 0px 0px;
     height: 400px;
+}
+
+.descricao{
+    color: white;
+    margin-left: 10px;
+   
+}
+.corpo_evento{
+    margin-left: 10px;
+    color: white;
+}
+
+.img_perfil{
+    height: 40px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.comentario{
+    background-color: rgba(0, 0, 0, 0.174);
+    
+    color: white;
+    border-radius: 0px 10px 10px 10px;
+    font-size: 13px;
+    padding: 10px;
+    
+}
+.nome{
+    background-color: #5814b8;
+    margin-bottom: -5px;
 }
