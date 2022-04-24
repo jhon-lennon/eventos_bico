@@ -17,7 +17,7 @@
                 <div class="col-12">
                     
 
-                    <div class="ver_evento bg-transparente">
+                    <div class="ver_evento bg-transparente mb-3">
                         <div class="corpo_evento">
 
                         
@@ -40,11 +40,9 @@
                                 <p>970 pessoas confirmaram presença</p>
                                 
                                 
-                                
-                      
                               </div>
                              
-                                <p class="mt-3"><a href="" class="btn  ">Voltar</a> <a href=""
+                                <p class=""><a href="" class="btn  ">Voltar</a> <a href=""
                                     class="btn btn-c">Presença confirmada <i class="fa-solid fa-circle-check"></i></a>
                               
                    
@@ -52,13 +50,13 @@
                     </div>
                 </div>
                 <div class="col-12">
-                    <div class="ver_evento bg-transparente">
+                    <div class="ver_evento">
                         <div class="corpo_evento">
                             <img src="../resources/images/logo3.jpg" alt="" class="img_perfil">
-                            <span>jhon Lennon Silva</span><br>
-                            <label for="exampleFormControlTextarea1" class="form-label">Faça um comentario</label>
-                        <textarea class="form-control" name="descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        <span><a href="" class="btn  mt-2">comentar</a></span>
+                            <span class="nome">jhon Lennon Silva</span><br>
+                            
+                        <textarea class="form-control mt-1" placeholder="Faça um comentário." name="descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
+                        <span><a href="" class="btn  mt-2">comentar</a></span><span class="n-comentarios">934 comentários</span><hr>
                             
 
                         </div>
@@ -68,16 +66,39 @@
                 <div class="col-12 mt-2">
                     <div class="ver_evento">
                         <div class="corpo_evento">
-                            <img src="../resources/images/logo3.jpg" alt="" class="img_perfil">
-                           <span class="nome">teste</span>
-                            <p class="comentario">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Asperi.</p>
+                                <img src="../resources/images/m.jpg" alt="" class="img_perfil">
+                                <span class="nome">Leticia Lima</span>
+                                <div class="seta"></div>
+                                
+                            <p class="comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis mollitia reprehenderit modi itaque dicta ea pariatur nobis. Officia sunt quibusdam
+                                 dolores consectetur aliquam, perferendis possimus eaque accusamus pariatur inventore.</p>
                         </div>
                     </div>
                 </div>
-
-
-
-
+                <div class="col-12 mt-2">
+                    <div class="ver_evento">
+                        <div class="corpo_evento">
+                                <img src="../resources/images/jhon2.jpg" alt="" class="img_perfil">
+                                <span class="nome">Lennon Carvalho</span>
+                                <div class="seta"></div>
+                                
+                            <p class="comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis mollitia reprehenderit modi itaque dicta ea pariatur nobis. Officia sunt quibusdam
+                                 dolores consectetur aliquam, perferendis possimus eaque accusamus pariatur inventore.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 mt-2">
+                    <div class="ver_evento">
+                        <div class="corpo_evento">
+                                <img src="../resources/images/jhon.jpg" alt="" class="img_perfil">
+                                <span class="nome"> Jhon Siva</span>
+                                <div class="seta"></div>
+                                
+                            <p class="comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis mollitia reprehenderit modi itaque dicta ea pariatur nobis. Officia sunt quibusdam
+                                 dolores consectetur aliquam, perferendis possimus eaque accusamus pariatur inventore.</p>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     @endsection
