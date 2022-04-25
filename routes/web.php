@@ -2,7 +2,10 @@
 
 //use GuzzleHttp\Psr7\Request;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Request as FacadesRequest;
 use Illuminate\Support\Facades\Route;
+
+use function GuzzleHttp\json_encode;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +37,40 @@ Route::get('/mostrar_evento', function () {
 Route::get('/perfil', function () {
     return view('perfil');
 })->name('perfil');
+
+
+Route::post('/script_php', function ( Request $request) {
+
+ $nome = $request->input('nome');
+ $com = $request->input('comentario');
+
+
+
+$comentarios = [
+    ['mone' => 'Leticia Lima', 'comentario' => 'descriçao: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Voluptas molestiae consectetur error, laboriosam architecto doloribus ad commodi repudiandae
+    consequuntur totam quas tempore reiciendis, blanditiis, delectus autem temporibus dolor'],
+
+    ['mone' => 'Jhon Silva', 'comentario' => 'descriçao: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Voluptas molestiae consectetur error, laboriosam architecto doloribus ad commodi repudiandae
+    consequuntur totam quas tempore reiciendis, blanditiis, delectus autem temporibus dolor'],
+
+    ['mone' => 'Lennon Carvalho', 'comentario' => 'descriçao: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+    Voluptas molestiae consectetur error, laboriosam architecto doloribus ad commodi repudiandae
+    consequuntur totam quas tempore reiciendis, blanditiis, delectus autem temporibus dolor'],
+   [ 'nome' => $nome, 'comentario' => $com]
+];
+
+
+
+
+
+
+
+$comentarios = json_encode($comentarios);
+
+     echo $comentarios;
+})->name('script_php');
 
 Route::post('/enviar', function (Request $request) {
    echo"<pre>";

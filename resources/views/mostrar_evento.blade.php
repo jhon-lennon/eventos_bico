@@ -49,14 +49,62 @@
                     </div>
                     </div>
                 </div>
+
+
+
+
+                
+<button class="btn " onclick="comentt()">teste</button> <button class="btn"  onclick="add_coment()">axios</button>
+<button class="btn"  onclick="post_teste()">post</button>
+
+
+
+
+                <div class="container" id="comentarioss">
+              
+                </div>
+
+
+
+
+
+                
+
+
+
+                
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                 <div class="col-12">
                     <div class="ver_evento">
                         <div class="corpo_evento">
                             <img src="../resources/images/logo3.jpg" alt="" class="img_perfil">
                             <span class="nome">jhon Lennon Silva</span><br>
                             
-                        <textarea class="form-control mt-1" placeholder="Faça um comentário." name="descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
-                        <span><a href="" class="btn  mt-2">comentar</a></span><span class="n-comentarios">934 comentários</span><hr>
+                        <textarea class="form-control mt-1" placeholder="Faça um comentário." name="descricao" id="campo-momentario" rows="3"></textarea>
+                        <span><a  onclick="add_comentario()" class="btn  mt-2">comentar</a></span><span class="n-comentarios">934 comentários</span><hr>
                             
 
                         </div>

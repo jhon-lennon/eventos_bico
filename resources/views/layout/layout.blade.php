@@ -20,6 +20,7 @@ use Illuminate\Support\Facades\Route;
 
     <link rel="stylesheet" href="fontawesome-free-6.1.1-web/css/fontawesome.css">
     <script src="fontawesome-free-6.1.1-web/js/all.js"></script>
+    <script src="../resources/js/axios.min.js"></script> 
 
 </head>
 
