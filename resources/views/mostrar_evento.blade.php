@@ -72,6 +72,12 @@
                                 
                             <p class="comentario">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nisi facilis mollitia reprehenderit modi itaque dicta ea pariatur nobis. Officia sunt quibusdam
                                  dolores consectetur aliquam, perferendis possimus eaque accusamus pariatur inventore.</p>
+                                 
+                                 <div class="row">
+                                     <div class="col-12 text-end">
+                                         <a class="btn-editar-comentario m-end" data-bs-toggle="modal" href="#exampleModalToggle" role="button">Editar</a>
+                                     </div>
+                                 </div>
                         </div>
                     </div>
                 </div>
@@ -101,4 +107,50 @@
                 </div>
             </div>
         </div>
+        
+<div class="modal fade" id="exampleModalToggle" aria-hidden="true" aria-labelledby="exampleModalToggleLabel" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel">Editar perfil</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+            <form>
+                <div class="form-group">
+                  <label for="exampleInputEmail1">Comentário</label>
+                  <textarea class="form-control mt-1" placeholder="Faça um comentário." name="descricao" id="exampleFormControlTextarea1" rows="3"></textarea>
+                </div>
+                
+                <div class="mt-2">
+                  <button type="submit" class="btn btn_form">Salvar</button>
+                  <a href="{{route('login')}}" class="btn btn_form">Cancelar</a>
+
+                </div>
+                
+              </form>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle2" data-bs-toggle="modal">Excluir comentário</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="modal fade" id="exampleModalToggle2" aria-hidden="true" aria-labelledby="exampleModalToggleLabel2" tabindex="-1">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalToggleLabel2">Excluir comentário</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          Quer excluir esse comentário? <button class="btn btn-form">Sim</button>
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-primary" data-bs-target="#exampleModalToggle" data-bs-toggle="modal">Voltar</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
     @endsection

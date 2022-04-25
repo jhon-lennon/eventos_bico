@@ -31,6 +31,10 @@ Route::get('/mostrar_evento', function () {
     return view('mostrar_evento');
 })->name('mostrar_evento');
 
+Route::get('/perfil', function () {
+    return view('perfil');
+})->name('perfil');
+
 Route::post('/enviar', function (Request $request) {
    echo"<pre>";
     print_r($request->input());
