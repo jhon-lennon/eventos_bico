@@ -1,9 +1,12 @@
 <?php
 
 //use GuzzleHttp\Psr7\Request;
+
+use App\Http\Controllers\Comentarios;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Request as FacadesRequest;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 use function GuzzleHttp\json_encode;
 
@@ -76,3 +79,5 @@ Route::post('/enviar', function (Request $request) {
    echo"<pre>";
     print_r($request->input());
 })->name('post');
+
+Route::post('/com', [Comentarios::class, 'inserir']);

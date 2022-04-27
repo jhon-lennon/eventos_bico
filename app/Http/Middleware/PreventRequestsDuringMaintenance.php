@@ -12,6 +12,6 @@ class PreventRequestsDuringMaintenance extends Middleware
      * @var array<int, string>
      */
     protected $except = [
-        //
+       'http://localhost/eventos_bico/public/com'
     ];
 }

@@ -102,10 +102,10 @@
                         <div class="corpo_evento">
                             <img src="../resources/images/logo3.jpg" alt="" class="img_perfil">
                             <span class="nome">jhon Lennon Silva</span><br>
-                            
-                        <textarea class="form-control mt-1" placeholder="Faça um comentário." name="descricao" id="campo-momentario" rows="3"></textarea>
-                        <span><a  onclick="add_comentario()" class="btn  mt-2">comentar</a></span><span class="n-comentarios">934 comentários</span><hr>
-                            
+                         <form action="" method="post" id="id_form"> 
+                        <textarea class="form-control mt-1" placeholder="Faça um comentário." name="comentario" id="campo-momentario" rows="3"></textarea>
+                        <span><button class="btn " onclick="ajaa('id_form')" class="btn  mt-2">comentar</button></span><span class="n-comentarios">934 comentários</span><hr>
+                            </form>  
 
                         </div>
                     </div>
